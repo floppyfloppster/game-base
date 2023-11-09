@@ -17,6 +17,7 @@ export default class Game {
     }
     this.player.update(deltaTime)
   }
+  
 
   draw(context) {
     this.player.draw(context)
