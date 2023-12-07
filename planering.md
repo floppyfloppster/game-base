@@ -8,7 +8,7 @@ Mina mål med detta projekt:
 
 
 16/11 
-Gjorde bakgrund till image
+Gjorde bakgrund till en image
 
 Vad, hur, varför
 Vad:
