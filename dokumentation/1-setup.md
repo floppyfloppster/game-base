@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 # Setup
-=======
-
-I alla kod-exempel betyder ```...``` att det finns kod där men den skrivs inte ut. Detta för att kodens exempel inte ska bli för långa.
->>>>>>> 9-6
 
 Projektet är skapat med vite.
 
