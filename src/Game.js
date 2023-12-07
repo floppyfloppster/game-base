@@ -5,6 +5,7 @@ import UserInterface from './UserInterface.js'
 import Platform from './Platform.js'
 export default class Game {
   constructor(width, height) {
+    this.player = new Player(this)
     this.width = width
     this.height = height
     this.input = new InputHandler(this)
@@ -71,6 +72,7 @@ export default class Game {
     })
     this.enemies = this.enemies.filter((enemy) => !enemy.markedForDeletion)
   }
+  
 
   draw(context) {
     this.ui.draw(context)
