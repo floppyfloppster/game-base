@@ -1,14 +1,11 @@
 import Projectile from './Projectile.js'
-// import spriteImage from './assets/sprites/Idle Run (78x58).png'
-import idleAsset from './assets/sprites/Idle (78x58).png'
-import runAsset from './assets/sprites/Run (78x58).png'
-import attackAsset from './assets/sprites/Attack (78x58).png'
+import spriteImage from './assets/sprites/sprite animation.png'
 
 export default class Player {
   constructor(game) {
     this.game = game
-    this.width = 78
-    this.height = 58
+    this.width = 32
+    this.height = 32
     this.x = 50
     this.y = 100
 
@@ -18,43 +15,25 @@ export default class Player {
 
     this.speedX = 0
     this.speedY = 0
-    this.maxSpeed = 6
-    this.jumpSpeed = 14
+    this.maxSpeed = 4
+    this.jumpSpeed = 17
     this.grounded = false
 
     // adding sprite image
-    const idleImage = new Image()
-    idleImage.src = idleAsset
-    const runImage = new Image()
-    runImage.src = runAsset
-    const attackImage = new Image()
-    attackImage.src = attackAsset
+    const image = new Image()
+    image.src = spriteImage
+    this.image = image
 
     // sprite animation
-    this.frameX = 0
-    this.maxFrame = 0
-    this.animationFps = 20
-    this.animationTimer = 0
-    this.animationInterval = 1000 / this.animationFps
-    this.idle = {
-      image: idleImage,
-      frames: 11,
-    }
-    this.run = {
-      image: runImage,
-      frames: 8,
-    }
-    this.attack = {
-      image: attackImage,
-      frames: 3,
-    }
-    this.image = this.idle.image
+    this.frameX = 64
+    this.frameY = 64
+    this.maxFrame = 8
+    this.fps = 20
+    this.timer = 0
+    this.interval = 1000 / this.fps
 
     // flip sprite direction
     this.flip = false
-
-    // shooting
-    this.shooting = false
   }
 
   update(deltaTime) {
@@ -77,20 +56,11 @@ export default class Player {
       this.speedY += this.game.gravity
     }
 
-    console.log(this.shooting)
     // play run or idle animation
-    if (this.shooting) {
-      this.maxFrame = this.attack.frames
-      this.image = this.attack.image
-      if (this.frameX === this.attack.frames - 1) {
-        this.shooting = false
-      }
-    } else if (this.speedX !== 0) {
-      this.maxFrame = this.run.frames
-      this.image = this.run.image
+    if (this.speedX !== 0) {
+      this.frameY = 1
     } else {
-      this.maxFrame = this.idle.frames
-      this.image = this.idle.image
+      this.frameY = 0
     }
 
     this.y += this.speedY
@@ -112,11 +82,11 @@ export default class Player {
     }
 
     // sprite animation update
-    if (this.animationTimer > this.animationInterval) {
+    if (this.timer > this.interval) {
       this.frameX++
-      this.animationTimer = 0
+      this.timer = 0
     } else {
-      this.animationTimer += deltaTime
+      this.timer += deltaTime
     }
 
     // reset frameX when it reaches maxFrame
@@ -144,12 +114,10 @@ export default class Player {
       context.scale(-1, 1)
     }
 
-    // s = source, d = destination
-    // image, sx, sy, swidth, sheight, dx, dy, dwidth, dheight
     context.drawImage(
       this.image,
       this.frameX * this.width,
-      -14,
+      this.frameY * this.height,
       this.width,
       this.height,
       this.flip ? this.x * -1 - this.width : this.x,
@@ -162,8 +130,6 @@ export default class Player {
   }
 
   shoot() {
-    this.shooting = true
-    console.log('shoot ', this.shooting)
     this.projectiles.push(
       new Projectile(this.game, this.x + this.width, this.y + this.height / 2)
     )
