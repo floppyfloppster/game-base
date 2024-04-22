@@ -6,6 +6,7 @@ Skapa en ny fil i mappen `src` och döp den till `Player.js`. I den här filen s
 
 ```javascript
 export default class Player {
+}
 ```
 
 - `export default class Player`: Här definieras en klass med namnet `Player`. Klassen används för att beskriva egenskaper och beteenden för en spelare i spelet. `export default` gör klassen tillgänglig för att importeras och användas i andra delar av koden.

@@ -81,6 +81,7 @@ export default class UserInterface {
     this.fontFamily = 'Arial'
     this.color = 'white'
   }
+}
 ```
 
 ### Metoder

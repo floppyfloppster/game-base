@@ -4,6 +4,7 @@ I denna version så rör sig projektilerna i en rak led från spelaren.
 
 ```javascript
 export default class Projectile {
+}
 ```
 
 - `export default class Projectile`: Här definieras en klass med namnet `Projectile`. Denna klass kommer att användas för att beskriva egenskaper och beteenden för projektiler i spelet.

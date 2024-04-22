@@ -81,6 +81,7 @@ export default class Game {
     this.enemyTimer = 0
     this.enemyInterval = 1000
   }
+}
 ```
 
 - `this.enemies = []`: Här skapar vi en lista som kommer att hålla alla fiender.
