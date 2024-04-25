@@ -8,7 +8,7 @@ export default class Projectile {
     this.x = x
     this.y = y
 
-    this.speed = 5
+    this.speed = 3
     this.damage = 1
     this.markedForDeletion = false
 

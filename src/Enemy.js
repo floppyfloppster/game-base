@@ -9,6 +9,7 @@ export default class Enemy {
     this.y = 350
 
     this.frameX = 0
+  
 
     this.projectiles = []
 
@@ -21,18 +22,21 @@ export default class Enemy {
     this.jumpInterval = 600
     this.grounded = false
 
+
+    this.flip = true
     const image = new Image()
     image.src = spriteImage
     this.image = image
-
+  
+    
     this.frameX = 0
     this.frameY = 1
     this.maxFrame = 8
     this.fps = 20
     this.timer = 0
     this.interval = 2000 / this.fps
+    this.lives = 2
 
-    this.flip = false
   }
 
   update() {
