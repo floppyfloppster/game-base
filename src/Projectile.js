@@ -1,7 +1,7 @@
 import attackAsset from './assets/sprites/Attack (78x58).png'
 
 export default class Projectile {
-  constructor(game, x, y) {
+  constructor(game, x, y, playerDirection) {
     this.game = game
     this.width = 4
     this.height = 4
@@ -11,6 +11,9 @@ export default class Projectile {
     this.speed = 3
     this.damage = 1
     this.markedForDeletion = false
+      this.playerDirection = playerDirection;
+      this.creationTime = Date.now();
+    
 
     // adding sprite image
     const attackImage = new Image()
