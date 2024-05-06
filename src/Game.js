@@ -3,6 +3,7 @@ import InputHandler from './InputHandler.js'
 import Player from './Player.js'
 import UserInterface from './UserInterface.js'
 import Platform from './Platform.js'
+import Hiscore from './Hiscore.js'
 export default class Game {
   constructor(width, height) {
     this.player = new Player(this)
