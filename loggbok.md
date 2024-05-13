@@ -6,3 +6,6 @@ mitt spel är inte dött längre och jag har fått så att ankorna är vända å
 
 v.19 06/05
 försöker fixa highscore och har kollat på glitch, ska fixa highscore imorgon och försöka få glitch att funka måste ha lite hjälp med highscore för har fastnat på det
+
+v.20 13/05
+har fixat med glitch så att servern funkar ,nu måste jag koppla själva spelet till det sen borde jag vara klar :)
