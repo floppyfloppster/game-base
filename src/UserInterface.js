@@ -20,6 +20,11 @@ export default class UserInterface {
       20,
       100
     )
+    context.fillText(
+      `Score: ${(this.game.score)}`,
+      20,
+      50
+    )
 
     if (this.game.gameOver) {
       context.textAlign = 'center'

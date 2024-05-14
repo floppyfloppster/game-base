@@ -16,6 +16,7 @@ export default class Game {
     this.gravity = 1
     this.debug = false
     this.gameTime = 0
+    this.score = 0
 
     this.enemies = []
     this.enemyTimer = 0
@@ -35,6 +36,9 @@ export default class Game {
   update(deltaTime) {
     if (!this.gameOver) {
       this.gameTime += deltaTime
+     } else {
+      console.log("det här skrivs ut om gameover är true")
+      return
     }
     this.player.update(deltaTime)
 
@@ -63,11 +67,15 @@ export default class Game {
       enemy.update(deltaTime)
       if (this.checkCollision(this.player, enemy)) {
         enemy.markedForDeletion = true
+        this.gameOver = true
+        this.newHiscore()
       }
       this.player.projectiles.forEach((projectile) => {
         if (this.checkCollision(projectile, enemy)) {
           enemy.markedForDeletion = true
           projectile.markedForDeletion = true
+          this.score += 1
+          console.log(this.score)
         }
       })
     })
@@ -114,5 +122,9 @@ export default class Game {
       }
       return false
     }
+  }
+
+  newHiscore() {
+    console.log("skicka in en new hiscore med fetch till server")
   }
 }

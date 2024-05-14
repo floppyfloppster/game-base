@@ -9,3 +9,6 @@ försöker fixa highscore och har kollat på glitch, ska fixa highscore imorgon 
 
 v.20 13/05
 har fixat med glitch så att servern funkar ,nu måste jag koppla själva spelet till det sen borde jag vara klar :)
+
+v.20 14/05
+har nu äntligen highscore och game over, YIPIE
