@@ -125,6 +125,7 @@ export default class Game {
   }
 
   newHiscore() {
+    
     console.log("skicka in en new hiscore med fetch till server")
   }
 }

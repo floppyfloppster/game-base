@@ -12,3 +12,6 @@ har fixat med glitch så att servern funkar ,nu måste jag koppla själva spelet
 
 v.20 14/05
 har nu äntligen highscore och game over, YIPIE
+
+v.21 21/05 + läxhjälp
+fick lite hjälp av kaj och noel har fått Hiscore saken att koppla till glitch men den blir odefinerad på glitch, måste fixas asap

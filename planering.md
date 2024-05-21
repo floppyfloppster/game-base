@@ -20,5 +20,3 @@ Varför:För att mario och halloween är ganska coolt och jag har alltid haft en
 
 Målgrupp:Mål gruppen för spelet är ganska brätt, det är halloween tema men inga grova ämnen som t.ex: glod eller gore 
 Målgruppen tänker jag är 10+ för det finns ingen riktig gräns att man blir "för gamal" men mindre barn kanska inte skulle förstå eller uppskatta spelet lika mycket än en viss ålder.
-
-Spelinehåll:
