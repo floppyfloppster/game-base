@@ -19,4 +19,4 @@ Hur:Genom att ta jens bas för själva mario temade spelet så kommer jag forst�
 Varför:För att mario och halloween är ganska coolt och jag har alltid haft en preference för side scrolls som är ganska mario liknande.
 
 Målgrupp:Mål gruppen för spelet är ganska brätt, det är halloween tema men inga grova ämnen som t.ex: glod eller gore 
-Målgruppen tänker jag är 10+ för det finns ingen riktig gräns att man blir "för gamal" men mindre barn kanska inte skulle förstå eller uppskatta spelet lika mycket än en viss ålder.
+Målgruppen tänker jag är 10+ för det finns ingen riktig gräns att man blir "för gamal" men mindre barn kanska inte skulle förstå eller uppskatta spelet lika mycket än en viss ålder. 

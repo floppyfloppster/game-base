@@ -3,7 +3,7 @@ import InputHandler from './InputHandler.js'
 import Player from './Player.js'
 import UserInterface from './UserInterface.js'
 import Platform from './Platform.js'
-import Hiscore from './Hiscore.js'
+
 export default class Game {
   constructor(width, height) {
     this.player = new Player(this)
@@ -17,6 +17,8 @@ export default class Game {
     this.debug = false
     this.gameTime = 0
     this.score = 0
+    
+    this.url = 'https://pyrite-trusting-rest.glitch.me'
 
     this.enemies = []
     this.enemyTimer = 0
@@ -125,7 +127,19 @@ export default class Game {
   }
 
   newHiscore() {
-    
+    // ny variabel för ditt namn
+    // spara prompt("ditt namn") i namn
+    // använd i post request 
+    let name = prompt("enter your name",);
+      const hiscore = { score: this.score, name: name }
+      fetch(`${this.url}/score`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(hiscore),
+      })
     console.log("skicka in en new hiscore med fetch till server")
+  
   }
 }
