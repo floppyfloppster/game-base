@@ -1,6 +1,6 @@
-import './node_modules/modern-css-reset/dist/reset.min.css'
-import './assets/css/style.css'
-import { setup } from './src/setup.js'
+import '/node_modules/modern-css-reset/dist/reset.min.css'
+import '/assets/css/style.css'
+import { setup } from '/src/setup.js'
 
 document.querySelector('#app').innerHTML = `
   <canvas id="canvas1"></canvas>
