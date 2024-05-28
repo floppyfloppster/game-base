@@ -17,7 +17,7 @@ export default class Game {
     this.debug = false
     this.gameTime = 0
     this.score = 0
-    
+
     this.url = 'https://pyrite-trusting-rest.glitch.me'
 
     this.enemies = []
@@ -38,7 +38,7 @@ export default class Game {
   update(deltaTime) {
     if (!this.gameOver) {
       this.gameTime += deltaTime
-     } else {
+    } else {
       console.log("det här skrivs ut om gameover är true")
       return
     }
@@ -83,7 +83,7 @@ export default class Game {
     })
     this.enemies = this.enemies.filter((enemy) => !enemy.markedForDeletion)
   }
-  
+
 
   draw(context) {
     this.ui.draw(context)
@@ -131,15 +131,20 @@ export default class Game {
     // spara prompt("ditt namn") i namn
     // använd i post request 
     let name = prompt("enter your name",);
-      const hiscore = { score: this.score, name: name }
-      fetch(`${this.url}/score`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(hiscore),
+    const hiscore = { score: this.score, name: name }
+    fetch(`${this.url}/score`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(hiscore),
+    })
+      .then((response) => response.text())
+      .then((text) => {
+        console.log(text)
       })
+
     console.log("skicka in en new hiscore med fetch till server")
-  
+
   }
 }
