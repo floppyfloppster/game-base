@@ -12,7 +12,6 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "bottleneck": "^2.19.5",
     "modern-css-reset": "^1.4.0"
   }
 }
