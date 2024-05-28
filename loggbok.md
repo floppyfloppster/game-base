@@ -18,3 +18,12 @@ fick lite hjälp av kaj och noel har fått Hiscore saken att koppla till glitch 
 
 v.21 23/05
 Jag har fixat så att prompt är en sak, det fixar så att man kan ha en dialog ruta som i min situation skriver in ditt namn till glitch som sen skickar det till databasen.Gjorde en postScore i mitt Game.js som gör så att jag kan skicka infon till glitch med this.url som kopplar dom två så att den vet vilken url som glitch är. På grund av min postScore så funkar nu mitt hiscore :) eller det visas iallafall upp i servern har inte gjort kod så att det kan visas och sparas på webbsidan
+
+v.22 THE FINAL COUNTDOWN
+
+
+
+planering => vad jag har gjort
+koppla
+validering
+WAVE
